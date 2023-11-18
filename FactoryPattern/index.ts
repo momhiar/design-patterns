@@ -9,7 +9,13 @@ abstract class MachineFactory {
 
 class TruckFactory extends MachineFactory {
     public createMachine(): Machine {
-        return new Truck()
+        return new Truck();
+    }
+}
+
+class CarFactory extends MachineFactory {
+    public createMachine(): Machine {
+        return new Car();
     }
 }
 interface Machine {
@@ -19,5 +25,11 @@ interface Machine {
 class Truck implements Machine {
     start(): void {
         console.log("Truck is starting...")
+    }
+}
+
+class Car implements Machine {
+    start(): void {
+        console.log("Beep Beep , Abeautiful Car is starting !")
     }
 }
