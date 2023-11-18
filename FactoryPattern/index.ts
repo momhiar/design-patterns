@@ -30,6 +30,16 @@ class Truck implements Machine {
 
 class Car implements Machine {
     start(): void {
-        console.log("Beep Beep , Abeautiful Car is starting !")
+        console.log("Beep Beep , A beautiful Car is starting !")
     }
 }
+
+
+
+// Testing Code ...
+const myCarFactory: MachineFactory = new CarFactory();
+const customer1Machine: Machine = myCarFactory.createMachine();
+customer1Machine.start();
+const myTruckFactory: MachineFactory = new TruckFactory();
+const customer2Machine: Machine = myTruckFactory.createMachine();
+customer2Machine.start()
