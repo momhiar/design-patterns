@@ -7,6 +7,17 @@ abstract class MachineFactory {
 }
 
 
+class TruckFactory extends MachineFactory {
+    public createMachine(): Machine {
+        return new Truck()
+    }
+}
 interface Machine {
     start(): void;
+}
+
+class Truck implements Machine {
+    start(): void {
+        console.log("Truck is starting...")
+    }
 }
